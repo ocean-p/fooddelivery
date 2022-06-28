@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 
 function App() {
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <div className="w-screen h-auto flex flex-col bg-primary">
         <Header />
 
