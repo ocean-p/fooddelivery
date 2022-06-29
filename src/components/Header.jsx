@@ -107,7 +107,7 @@ const Header = () => {
                       <p className='px-4 py-2 flex items-center gap-3 
                     cursor-pointer hover:bg-slate-200 transition-all
                     duration-100 ease-in-out text-textColor text-base rounded-lg
-                  '>New Item <MdAdd /></p>
+                  ' onClick={() => setIsMenu(false)}>New Item <MdAdd /></p>
                     </Link>
                   )
                 }
@@ -169,22 +169,22 @@ const Header = () => {
                 <li className='text-base text-textColor hover:text-headingColor
                   duration-100 transition-all ease-in-out cursor-pointer
                   px-4 py-2 hover:bg-slate-200
-                '>
+                ' onClick={() => setIsMenu(false)}>
                   Home</li>
                 <li className='text-base text-textColor hover:text-headingColor
                   duration-100 transition-all ease-in-out cursor-pointer
                   px-4 py-2 hover:bg-slate-200
-                '>
+                ' onClick={() => setIsMenu(false)}>
                   Menu</li>
                 <li className='text-base text-textColor hover:text-headingColor
                   duration-100 transition-all ease-in-out cursor-pointer
                   px-4 py-2 hover:bg-slate-200
-                '>
+                ' onClick={() => setIsMenu(false)}>
                   About Us</li>
                 <li className='text-base text-textColor hover:text-headingColor
                   duration-100 transition-all ease-in-out cursor-pointer
                   px-4 py-2 hover:bg-slate-200
-                '>
+                ' onClick={() => setIsMenu(false)}>
                   Service</li>
               </ul>
               <p className='m-2 p-2 flex items-center justify-center gap-3 
