@@ -215,7 +215,7 @@ const CreateContainer = () => {
               </label>
             </>) : (<>
               <div className='relative h-full'>
-                <img src={imageAsset} alt="upload-image"
+                <img src={imageAsset} alt="upload"
                   className='w-full h-full object-cover'
                 />
                 <button
