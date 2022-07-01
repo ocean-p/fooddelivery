@@ -18,7 +18,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
           className='w-300 min-w-[300px] md:w-340 md:min-w-[340px] h-[225px] 
             my-12 backdrop-blur-lg bg-cardOverlay
             rounded-lg p-2 hover:drop-shadow-lg flex flex-col items-center 
-            justify-between'>
+            justify-between relative'>
           <div className='w-full flex items-center justify-between'>
             <motion.img
               whileHover={{ scale: 1.2 }}
