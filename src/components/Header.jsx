@@ -13,7 +13,7 @@ const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
-  const [{ user, cartShow }, dispatch] = useStateValue();
+  const [{ user, cartShow, cartItems }, dispatch] = useStateValue();
   const [isMenu, setIsMenu] = useState(false);
 
   const login = async () => {
@@ -29,8 +29,6 @@ const Header = () => {
       setIsMenu(!isMenu);
     }
   }
-
-  console.log(user);
 
   const logout = () => {
     localStorage.clear();
@@ -87,11 +85,15 @@ const Header = () => {
             onClick={showCart}
           >
             <MdShoppingBasket className='text-textColor text-2xl cursor-pointer' />
-            <div className='absolute -top-2 -right-2 bg-cartNumBg rounded-full
-              w-5 h-5 flex items-center justify-center
-            '>
-              <p className='text-xs text-white font-semibold leading-5'>2</p>
-            </div>
+            {cartItems && cartItems.length > 0 && (
+              <div className='absolute -top-2 -right-2 bg-cartNumBg rounded-full
+                w-5 h-5 flex items-center justify-center
+              '>
+                <p className='text-xs text-white font-semibold leading-5'>
+                  {cartItems.length}
+                </p>
+              </div>
+            )}
           </div>
 
           <div className='relative'>
@@ -136,11 +138,15 @@ const Header = () => {
           onClick={showCart}
         >
           <MdShoppingBasket className='text-textColor text-2xl cursor-pointer' />
-          <div className='absolute -top-2 -right-2 bg-cartNumBg rounded-full
+          {cartItems && cartItems.length > 0 && (
+            <div className='absolute -top-2 -right-2 bg-cartNumBg rounded-full
               w-5 h-5 flex items-center justify-center
             '>
-            <p className='text-xs text-white font-semibold leading-5'>2</p>
-          </div>
+              <p className='text-xs text-white font-semibold leading-5'>
+                {cartItems.length}
+              </p>
+            </div>
+          )}
         </div>
         <Link to={'/'} className='flex items-center gap-2'>
           <img src={Logo} alt="logo"
