@@ -9,19 +9,20 @@ import { actionType } from './context/reducer';
 
 function App() {
   const [{foodItems}, dispatch] = useStateValue();
-
-  const fetchData = async () => {
-    await getAllFoodItems().then(data => {
-      dispatch({
-        type: actionType.SET_FOOD_ITEMS,
-        foodItems: data
-      })
-    })
-  }
+  console.log(foodItems)
 
   useEffect(() => {
+    const fetchData = async () => {
+      await getAllFoodItems().then(data => {
+        dispatch({
+          type: actionType.SET_FOOD_ITEMS,
+          foodItems: data
+        })
+      })
+    }
+
     fetchData();
-  }, [])
+  }, [dispatch])
 
   return (
     <AnimatePresence exitBeforeEnter>
