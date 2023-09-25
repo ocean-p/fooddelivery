@@ -1,5 +1,13 @@
 # ONLINE SHOPPING WEBSITE
 * This source code is about practicing ReactJS skills and using Firebase for back-end.
-* The origin: [tutorial-reference](https://youtu.be/kmU7uX3ZHJc)
 
-#### © 2022 by ocean-p | FPT University, HCMC
+### Technologies in project
+* ReactJs
+* Firebase
+
+### Main functions in project
+* View food
+* Search food by categories, name
+* Add food to cart
+  
+#### © 2022 by ocean-p | HCMC
